@@ -1,0 +1,11 @@
+<nav class='navbar navbar-expand navbar-light bg-light'>
+   <a class='navbar-brand'>{{titulo}}</a>
+      <ul class='nav nav-pills'>
+        <li><a class='nav-link'[routerLink]="['/inicio']"> Inicio </a></li>
+        <li> </li>
+        <li><a class='nav-link'[routerLink]="['/lista']"> Lista de Monedas </a></li>
+      </ul>
+  </nav>
+<div class='cotainer'>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,34 @@
+<div class='card'>
+    <div class='card-header'>
+     Lista de Monedas FMI
+    </div>
+  <div class='card-body'>
+     <div class='table.responsive'>
+      <table class='table'>
+          <thead>
+              <tr>
+                  <th>Moneda</th>
+                  <th>Nombre</th>
+                  <th>Pais de Origen</th>
+                  <th>Emisor</th>
+                  <th>Codigo ISO</th>
+                  <th>Paises donde es valida</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor='let moneda of monedas'>
+                   <td><img [src]='moneda.imagen'
+                    [style.width.px]='width'
+                    [style.margin.px]='margin'></td>
+                   <td>{{moneda.nombre}}</td>
+                   <td>{{moneda.pais_origen}}</td>
+                   <td>{{moneda.emisor}}</td>
+                   <td>{{moneda.codigo_iso}}</td>
+                   <td><a [routerLink]="['/moneda', moneda.codigo_iso]">Ver mas..</a></td>
+              </tr>
+          </tbody>
+      </table>
+    </div>   
+  </div>
+
+</div>
